@@ -1,0 +1,221 @@
+@import "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+
+/* @import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css"; */
+
+/* #ffa94d */
+/* ff922b */ /* 868e96 */ /* 868e96 */ /* 495057 */ /* 343a40 */
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.66%;
+}
+
+:root {
+  --main-dark-color: #3e362e;
+  --main-brown-color: #865d36;
+  --main-lightbrown-color: #93785b;
+  --main-5-color: #ac8968;
+  --main-light-color: #a69080;
+  --main-white-color: #fff;
+}
+
+/* .input-btn:checked ~ .navBack {
+  transform: scale(80);
+}
+
+.input-btn:checked ~ .navigation-nav {
+  opacity: 1;
+  width: 100%;
+} */
+
+/* .input-btn:checked ~ .nav-label { */
+/* opacity: 0; */
+/* width: 0; */
+/* height: 0; */
+/* } */
+
+.nav-cross {
+  color: var(--main-white-color);
+  font-size: 3rem;
+  font-weight: 700;
+  /* color: #fff; */
+  /* width: 3rem; */
+  /* height: 3rem; */
+  position: fixed;
+  top: 2.8rem;
+  right: 4rem;
+  /* border-radius: 50%; */
+  z-index: 2000;
+  /* transform: scale(80); */
+  box-shadow: 0 1rem 3rem rgb(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* **********************************DOT SECTION****************************** */
+
+.home-page-section__main {
+  background-image: url(/public/gal-12.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.home-page-section__1 {
+  background-image: url(/public/gal-5.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.home-page-section__2 {
+  background-image: url(/public/house-2.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.home-page-section__3 {
+  background-image: url(/public/gal-8.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.home-page-section__4 {
+  background-image: url(/public/gal-9.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.cart-icon-1 {
+  font-size: 3rem;
+  color: rgb(27, 78, 128);
+  /* fill: aqua; */
+}
+.cart-icon-2 {
+  color: #1da1f2;
+  font-size: 3rem;
+}
+.cart-icon-3 {
+  font-size: 3rem;
+  color: #0077b5;
+}
+.cart-icon-4 {
+  font-size: 3rem;
+  color: #25dd36;
+}
+.span {
+  font-size: 1.8rem;
+  margin-top: 4px;
+  margin-left: 4px;
+  color: #865d36;
+  /* line-height: 1.2; */
+  font-weight: 600;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.trash-icon {
+  font-size: 1.6rem;
+  color: rgb(230, 45, 45);
+  cursor: pointer;
+}
+.icon {
+  font-size: 2.6rem;
+  cursor: pointer;
+  position: relative;
+  color: #000;
+}
+
+.home {
+  height: 50vh;
+  background-color: #0077b5;
+}
+
+/* CARD8&****************************************** */
+
+.flip-card {
+  margin-left: 4rem;
+  height: 400px;
+  width: 300px;
+  background-color: transparent;
+  perspective: 100rem;
+}
+
+.flip-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card__inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card__front,
+.flip-card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card__back {
+  background-color: #fff;
+  /* color: white; */
+  transform: rotateY(180deg);
+}
+.footer {
+  background-color: pink;
+}
+
+.map {
+  height: 500px;
+  width: 100%;
+}
+.text-input {
+  height: 100px;
+}
+
+.plus-icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.line {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
