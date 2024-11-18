@@ -21,7 +21,7 @@ const Span = styled.span`
 `;
 
 function CartIcon() {
-  const { total_item } = useCartContext();
+  // const { total_item } = useCartContext();
 
   return (
     <>

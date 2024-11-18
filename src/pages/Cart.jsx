@@ -91,18 +91,18 @@ const EmptyDiv = styled.div`
 `;
 
 function Cart() {
-  const { cart, clearCart, total_amount, shipping_fee } = useCartContext();
+  const { cart, clearCart, shipping_fee } = useCartContext();
   console.log(cart);
 
-  if (cart.length === 0)
-    return (
-      <EmptyDiv>
-        <Heading as="h1">No Items In The Cart...</Heading>
-        <Link to="/products" className="link">
-          <StyledButton>Continue Shopping</StyledButton>
-        </Link>
-      </EmptyDiv>
-    );
+  // if (cart.length === 0)
+  //   return (
+  //     <EmptyDiv>
+  //       <Heading as="h1">No Items In The Cart...</Heading>
+  //       <Link to="/products" className="link">
+  //         <StyledButton>Continue Shopping</StyledButton>
+  //       </Link>
+  //     </EmptyDiv>
+  //   );
   return (
     <>
       <StyledCart>
@@ -130,7 +130,8 @@ function Cart() {
         <SubTotal>
           <SubTotalDetails>
             <SubTotalHeading>Subtotal:</SubTotalHeading>
-            <Para>{formatCurrency(total_amount)}</Para>
+            {/* <Para>{formatCurrency(total_amount)}</Para> */}
+            <Para>15666</Para>
           </SubTotalDetails>
           <SubTotalDetails>
             <SubTotalHeading>Shipping:</SubTotalHeading>
@@ -140,7 +141,8 @@ function Cart() {
           <hr />
           <SubTotalDetails>
             <SubTotalHeading>Total:</SubTotalHeading>
-            <Para>{formatCurrency(shipping_fee + total_amount)}</Para>
+            {/* <Para>{formatCurrency(shipping_fee + total_amount)}</Para> */}
+            <Para>120000</Para>
           </SubTotalDetails>
         </SubTotal>
       </StyledCart>
