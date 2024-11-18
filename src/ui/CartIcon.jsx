@@ -30,7 +30,7 @@ function CartIcon() {
           <FaCartPlus className="icon" />
         </Link>
         <Span>6</Span>
-        // <Span>{total_item}</Span>
+        {/* <Span>{total_item}</Span> */}
       </StyledCartIcon>
     </>
   );
