@@ -2,7 +2,7 @@ function cartReducer(state, action) {
   if (action.type === "ADD_TO_CART") {
     let { id, quantity, product } = action.payload;
 
-    let existingProduct = state.cart.find((curItem) => curItem.id === id);
+    let existingProduct = state.cart?.find((curItem) => curItem.id === id);
     if (existingProduct) {
       let updateProduct = state.cart.map((curElem) => {
         if (curElem.id == id) {
@@ -55,7 +55,7 @@ function cartReducer(state, action) {
   }
 
   if (action.type === "SET_INCREASE") {
-    let updatedProduct = state.cart.map((curElem) => {
+    let updatedProducts = state.cart.map((curElem) => {
       if (curElem.id === action.payload) {
         let incQuantity = curElem.quantity + 1;
         if (incQuantity >= curElem.max) {
@@ -69,16 +69,16 @@ function cartReducer(state, action) {
         return curElem;
       }
     });
-    return { ...state, cart: updatedProduct };
+    return { ...state, cart: updatedProducts };
   }
 
   if (action.type === "REMOVE_ITEM") {
-    let updatedCart = state.cart.filter(
+    let updateCarts = state.cart.filter(
       (curItem) => curItem.id !== action.payload
     );
     return {
       ...state,
-      cart: updatedCart,
+      cart: updateCarts,
     };
   }
 
@@ -89,29 +89,29 @@ function cartReducer(state, action) {
     };
   }
 
-  // if (action.type === "CART_TOTAL_ITEM") {
-  //   let updatedCartItem = state.cart?.reduce((initialValue, curElem) => {
-  //     let { quantity } = curElem;
-  //     initialValue = initialValue + quantity;
-  //     return initialValue;
-  //   }, 0);
-  //   return {
-  //     ...state,
-  //     total_item: updatedCartItem,
-  //   };
-  // }
+  if (action.type === "CART_TOTAL_ITEM") {
+    let updatedCartItem = state.cart?.reduce((initialValue, curElem) => {
+      let { quantity } = curElem;
+      initialValue = initialValue + quantity;
+      return initialValue;
+    }, 0);
+    return {
+      ...state,
+      total_item: updatedCartItem,
+    };
+  }
 
-  // if (action.type === "CART_TOTAL_AMOUNT") {
-  //   let total_amount = state.cart?.reduce((initialValue, curElem) => {
-  //     let { price, quantity } = curElem;
-  //     initialValue = initialValue + quantity * price;
-  //     return initialValue;
-  //   }, 0);
-  //   return {
-  //     ...state,
-  //     total_amount,
-  //   };
-  // }
+  if (action.type === "CART_TOTAL_AMOUNT") {
+    let total_amount = state.cart?.reduce((initialValue, curElem) => {
+      let { price, quantity } = curElem;
+      initialValue = initialValue + quantity * price;
+      return initialValue;
+    }, 0);
+    return {
+      ...state,
+      total_amount,
+    };
+  }
 
   return state;
 }

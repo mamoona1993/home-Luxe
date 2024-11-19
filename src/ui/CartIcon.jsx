@@ -21,7 +21,7 @@ const Span = styled.span`
 `;
 
 function CartIcon() {
-  // const { total_item } = useCartContext();
+  const { total_item } = useCartContext();
 
   return (
     <>
@@ -29,8 +29,8 @@ function CartIcon() {
         <Link to="/cart">
           <FaCartPlus className="icon" />
         </Link>
-        <Span>6</Span>
-        {/* <Span>{total_item}</Span> */}
+
+        <Span>{total_item}</Span>
       </StyledCartIcon>
     </>
   );
